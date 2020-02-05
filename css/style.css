@@ -5,9 +5,11 @@
     font-family: 'Nunito', sans-serif;
 }
 
-body{
-    /*overflow: hidden;*/
+a{
+    color:green;
+    text-decoration: none;
 }
+
 li{
     list-style-type: none;
     color: green;
@@ -28,6 +30,21 @@ li{
     align-items: center;
     transform:translateX(100%);
     transition: transform 0.5s ease-in;
+}
+
+@keyframes menuSlider{
+    0%{
+        height:0%;
+        width:0%;
+    }
+    50%{
+        height:10%;
+        width:10%
+    }
+
+    100%{
+        height:90%;
+    }
 }
 
 .nav-active{
