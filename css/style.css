@@ -3,3 +3,132 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    overflow: hidden;
+}
+li{
+    list-style-type: none;
+    color: green;
+    opacity: 0;
+}
+
+.navLinks{
+    background-color: white;
+    position:absolute;
+    right:0;
+    top: 10%;
+    padding: 2rem 3rem;
+    height:90%;
+    z-index:2;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform:translateX(100%);
+    transition: transform 0.5s ease-in;
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity:0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slider{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:linear-gradient(to left, #1e621e, #123b12
+    );
+    z-index: -1;
+    animation-name: slideInSlider;
+    animation-duration: 3s;
+}
+
+nav{
+    display:grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    min-height: 10vh;
+    color:white;
+    align-items: center;
+}
+
+.logo{
+    grid-column:2/3;
+    font-size:2rem;
+}
+
+.burger{
+    justify-self: end;
+    font-size: 2rem;
+}
+
+section{
+    display:flex;
+    height:80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.headline{
+    position: absolute;
+    top:65%;
+    left:15%;
+    font-size:2.5rem;
+    transform: translate(-20%, -70%);
+    color:white;
+    z-index: 3;
+    animation-name: fadeInHeadline;
+    animation-duration:3s;
+}
+
+.hero{
+    height: 80%;
+    width: 80%;
+    position: relative;
+    animation-name: expandHero;
+    animation-duration: 3s;
+
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+@keyframes expandHero{
+    0% {height: 0%; width:100%;}
+    50%  {height:80%;width:100%;}
+    100% {width:80%;}
+}
+
+@keyframes expandHeroWidth{
+    from{width:100%;}
+    to{width:80%;}
+}
+
+@keyframes fadeInHeadline{
+    0% {opacity:0;}
+    50% {opacity:0;}
+    100%{opacity:1;}
+}
+
+@keyframes slideInSlider{
+    0% {left:-100%}
+    50%{left:-100%}
+    100%{left:0%;}
+}
