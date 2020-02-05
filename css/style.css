@@ -4,6 +4,46 @@
     box-sizing: border-box;
 }
 
+body{
+    overflow: hidden;
+}
+li{
+    list-style-type: none;
+    color: green;
+    opacity: 0;
+}
+
+.navLinks{
+    background-color: white;
+    position:absolute;
+    right:0;
+    top: 10%;
+    padding: 2rem 3rem;
+    height:90%;
+    z-index:2;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform:translateX(100%);
+    transition: transform 0.5s ease-in;
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity:0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .slider{
     position: absolute;
     top:0;
@@ -16,8 +56,6 @@
     animation-name: slideInSlider;
     animation-duration: 3s;
 }
-
-
 
 nav{
     display:grid;
@@ -34,6 +72,7 @@ nav{
 
 .burger{
     justify-self: end;
+    font-size: 2rem;
 }
 
 section{
@@ -92,15 +131,4 @@ section{
     0% {left:-100%}
     50%{left:-100%}
     100%{left:0%;}
-}
-
-.hero::after{
-    content:"";
-    background: black;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0.2;
 }
