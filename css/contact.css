@@ -1,0 +1,116 @@
+body{
+    background:linear-gradient(to left , #1e621e, #123b12);
+}
+
+.contactMain{
+    display: grid;
+    grid-template-areas:
+    "contactTitle"
+    "contactMap"
+    "contactText"
+    "contactInfo"
+    "contactStore"
+    "contactBottomFill";
+    grid-template-columns: 1fr;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    background-color: white;
+    border-left: 0.2em solid black;
+    border-right: 0.2em solid black;
+}
+
+.topcontactBox{ 
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    background-color: #123b12;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    display: flex;
+}
+
+.topcontactBox i {
+    padding-right: 0.3em;
+    padding-top: 0.15em;
+}
+
+.contactTitle {
+    grid-area: contactTitle;
+    color: #123b12;
+    padding: 1em 0 0 2em;
+    -webkit-text-stroke: 0.1em #123b12;
+}
+
+.contactBox{
+    padding: 0 2em 1em 2em;
+    height: 9em;
+    background-color: white;
+}
+
+.contactBoxContent{
+    margin-top: 1em;
+    margin-left: 0.8em;
+}
+
+.contactMap{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    grid-area: contactMap;
+}
+.contactMap iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.contactInfo{
+    grid-area: contactInfo;
+}
+
+.contactText{
+    grid-area: contactText;
+}
+
+.contactStore{
+    grid-area: contactStore;
+}
+
+
+@media only screen and (min-width: 48em){
+    .contactMain{
+        grid-template-areas: 
+        "contactTitle contactTitle contactTitle"
+        "contactMap contactMap contactMap"
+        "contactInfo contactText contactStore"
+        "contactBottomFill contactBottomFill contactBottomFill";
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 45em;
+    }
+
+    .contactTitle {
+        padding: 2em 0 -5em 2em;
+    }
+
+    .contactText{
+        padding-top: 0;
+    }
+
+    .contactDogImage{
+        height: 100%;
+        margin: 0;
+        grid-area: contactDogImage;
+        background-size: cover;
+        background-position: 35% 0%;
+    }
+    .contactBox{
+        height: 8.5em;
+    }
+
+    .contactDogImage h2{
+        display: none;
+    }
+}

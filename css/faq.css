@@ -1,0 +1,147 @@
+body{
+    background:linear-gradient(to left , #1e621e, #123b12);
+}
+
+.faqMain{
+    display: grid;
+    grid-template-areas:
+    "faqTitle"
+    "faqDogImage"
+    "faqWhy"
+    "faqWhen"
+    "faqWhere"
+    "faqWho"
+    "faqHow"
+    "faqWhat"
+    "faqHeh"
+    "faqBottomFill";
+    grid-template-columns: 1fr;
+    width: 100vw;
+    margin: auto;
+    background-color: white;
+    border-left: 0.2em solid black;
+    border-right: 0.2em solid black;
+}
+
+.topfaqBox{ /*BLARRRPPPP*/
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    background-color: #123b12;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    display: flex;
+}
+.topfaqBox i {
+    padding-right: 0.3em;
+    padding-top: 0.15em;
+}
+
+.faqTitle {
+    grid-area: faqTitle;
+    color: #123b12;
+    padding: 1em 0 1em 2em;
+    -webkit-text-stroke: 0.1em #123b12;
+}
+
+.faqBox{
+    padding: 0 2em 1em 2em;
+    height: 9em;
+    background-color: white;
+}
+
+.faqBoxContent{
+    margin-top: 1em;
+    margin-left: 0.8em;
+}
+
+.faqDogImage{
+    grid-area: faqDogImage;
+    height: 17em;
+    margin: 1.5em 0;
+    background-position: 35% 30%;
+    background-image: url("../images/concentrating.jpg");
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+    
+}
+
+
+.faqDogImage:hover{
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.0);
+    transition: 0.3s;
+    -webkit-text-stroke: 0.005em #123b12;
+}
+
+.faqDogImage h2{
+    color: white;
+    font-size: 2em;
+    position: relative;
+    top: 17%;
+    left: 5%
+}
+
+.faqWhy{
+    grid-area: faqWhy;
+}
+.faqWhen{
+    grid-area: faqWhen;
+}
+.faqWhere{
+    grid-area: faqWhere;
+}
+.faqWho{
+    grid-area: faqWho;
+}
+.faqHow{
+    grid-area: faqHow;
+}
+.faqWhat{
+    grid-area: faqWhat;
+}
+.faqHeh{
+    grid-area: faqHeh;
+}
+.faqBottomFill{
+    grid-area: faqBottomFill;
+}
+
+@media only screen and (min-width: 48em){
+    .faqMain{
+        grid-template-areas: 
+        "faqTitle faqTitle faqDogImage"
+        "faqWhy faqWhy faqDogImage"
+        "faqWhen faqWhen faqDogImage"
+        "faqWhere faqWhere faqDogImage"
+        "faqWho faqWho faqDogImage"
+        "faqHow faqHow faqDogImage"
+        "faqWhat faqWhat faqDogImage"
+        "faqHeh faqHeh faqDogImage"
+        "faqBottomFill faqBottomFill faqBottomFill";
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 45em;
+    }
+
+    .faqTitle {
+        padding: 2em 0 -5em 2em;
+    }
+
+    .faqText{
+        padding-top: 0;
+    }
+
+    .faqDogImage{
+        height: 100%;
+        margin: 0;
+        grid-area: faqDogImage;
+        background-size: cover;
+        background-position: 35% 0%;
+    }
+    .faqBox{
+        height: 8.5em;
+    }
+
+    .faqDogImage h2{
+        display: none;
+    }
+}

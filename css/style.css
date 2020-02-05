@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
 }
 
 body{
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 li{
     list-style-type: none;
