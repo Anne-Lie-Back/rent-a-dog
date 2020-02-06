@@ -23,13 +23,43 @@ body{
     border-right: 0.2em solid black;
 }
 
-
 .aboutUsTitle {
     grid-area: aboutUsTitle;
     color: #123b12;
     padding: 1em 0 1em 2em;
     -webkit-text-stroke: 0.1em #123b12;
+    display: flex;
 }
+
+.flexboxTitle{
+    justify-content: space-between;
+}
+
+.titleBurger{
+    color: #123b12;
+    display: block;
+    font-size: 2rem;
+    position: absolute;
+    right: 8%;
+    top: 0.66em;
+}
+
+.fullScreenBurger{
+    display: none;
+}
+
+.flexboxTitle{
+    display: flex;
+}
+.aboutUsTitle img{
+    display: block;
+    margin-right: 0.5em;
+}
+
+.largescreenLogo{
+    display: none;
+}
+
 
 .aboutUsBox{
     padding: 0 2em 1em 2em;
@@ -48,12 +78,10 @@ body{
     margin-left: 0.8em;
 }
 
-
 .aboutUsDogImage h2{
     color: white;
     font-size: 2em;
     position: relative;
-    top: 17%;
     left: 5%
 }
 
@@ -140,4 +168,28 @@ body{
         background-size: cover;
         background-position: 30% 0%;
     }
+    .titleBurger{
+        right: 8%;
+        top: 0.66em;
+    }
+}
+
+@media only screen and (min-width: 54em){
+    .aboutUsTitle img{
+        display: none;
+    }
+    
+    .largescreenLogo{
+        display: block;
+    }
+
+    .titleBurger{
+        color: #123b12;
+        display: none;
+    }
+
+    .fullScreenBurger{
+        display: block;
+    }
+    
 }

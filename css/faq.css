@@ -41,6 +41,36 @@ body{
     color: #123b12;
     padding: 1em 0 1em 2em;
     -webkit-text-stroke: 0.1em #123b12;
+    display: flex;
+}
+
+.flexboxTitle{
+    justify-content: space-between;
+}
+
+.titleBurger{
+    color: #123b12;
+    display: block;
+    font-size: 2rem;
+    position: absolute;
+    right: 0.8em;
+    top: 0.66em;
+}
+
+.fullScreenBurger{
+    display: none;
+}
+
+.flexboxTitle{
+    display: flex;
+}
+.faqTitle img{
+    display: block;
+    margin-right: 0.5em;
+}
+
+.largescreenLogo{
+    display: none;
 }
 
 .faqBox{
@@ -63,7 +93,6 @@ body{
     background-size: cover;
     box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.4);
     transition: 0.3s;
-    
 }
 
 
@@ -80,7 +109,6 @@ body{
     top: 17%;
     left: 5%
 }
-
 .faqWhy{
     grid-area: faqWhy;
 }
@@ -106,6 +134,7 @@ body{
     grid-area: faqBottomFill;
 }
 
+
 @media only screen and (min-width: 48em){
     .faqMain{
         grid-template-areas: 
@@ -121,15 +150,12 @@ body{
         grid-template-columns: 1fr 1fr 1fr;
         width: 45em;
     }
-
     .faqTitle {
         padding: 2em 0 -5em 2em;
     }
-
     .faqText{
         padding-top: 0;
     }
-
     .faqDogImage{
         height: 100%;
         margin: 0;
@@ -144,4 +170,28 @@ body{
     .faqDogImage h2{
         display: none;
     }
+    .titleBurger{
+        right: 2.5em;
+        top: 0.66em;
+    }
+}
+
+@media only screen and (min-width: 54em){
+    .faqTitle img{
+        display: none;
+    }
+    
+    .largescreenLogo{
+        display: block;
+    }
+
+    .titleBurger{
+        color: #123b12;
+        display: none;
+    }
+
+    .fullScreenBurger{
+        display: block;
+    }
+    
 }
