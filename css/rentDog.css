@@ -66,6 +66,7 @@ body{
 }
 .image6{
     grid-area: image6;
+    display:flex;
    /*  background-image: url("../images/dogIntern.jpg"); */
 }
 
@@ -83,11 +84,18 @@ body{
 }
 
 .rentDogBox p{
-    margin-top:1.2rem;
+    margin-top:0.3rem;
 }
 
 h3{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.occupation{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 .rentDogBoxQuote{
@@ -140,6 +148,7 @@ h3{
 .rentDogQuote5{
     grid-area: quote5;
 }
+
 .rentDogQuote6{
     grid-area: quote6;
 }
@@ -168,11 +177,26 @@ h3{
     grid-area: text6;
 }
 
-
-
+.desktopImage6{
+    display:none;
+}
 
 @media only screen and (min-width: 48em){
+    .image6{
+        display:none;
+    }
 
+    .desktopImage6{
+        display:flex;
+        grid-area: desktop6;
+    }
+/*
+    .image6{
+        display:flex;
+        justify-self: center; 
+        height:100%;
+        width:auto;
+    }*/
      .rentDogMain{
 
         grid-template-areas: 
@@ -181,19 +205,27 @@ h3{
         "quote1 image1"
         "image2 text2"
         "image2 quote2"
-        "quote3 image3"
         "text3 image3"
-        "image4 quote4"
+        "quote3 image3"
         "image4 text4"
-        "quote5 image5"
+        "image4 quote4"
         "text5 image5"
-        "image6 quote6"
-        "image6 text6"
+        "quote5 image5"
+        "desktop6 text6"
+        "desktop6 text6"
+        "desktop6 text6"
+        "desktop6 text6"
+        "desktop6 quote6"
+        "desktop6 quote6"
+        "desktop6 quote6"
         ;
-        grid-template-rows: 6rem auto;
-        grid-template-columns: 1fr 1fr;
-        width: 45em;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr ;
+        width: 50em;
     } 
+    .dogImage{
+        height:100%;
+    }
 
     .rentDogTitle {
         padding: 2em 0 -5em 2em;
