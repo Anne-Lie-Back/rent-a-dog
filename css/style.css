@@ -33,6 +33,7 @@ a{
     top: 5em;/*0*/
     padding: 2rem 3rem;
     height:50vh;/*0*/
+    border:0.1rem solid black;
     z-index:5;
     display:flex;
     flex-direction: column;
