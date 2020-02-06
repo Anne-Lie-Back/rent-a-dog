@@ -177,18 +177,18 @@ h3{
 
         grid-template-areas: 
         "title title"
+        "text1 image1"
         "quote1 image1"
-        "text1 text1"
+        "image2 text2"
         "image2 quote2"
-        "text2 text2"
         "quote3 image3"
-        "text3 text3"
+        "text3 image3"
         "image4 quote4"
-        "text4 text4"
+        "image4 text4"
         "quote5 image5"
-        "text5 text5"
+        "text5 image5"
         "image6 quote6"
-        "text6 text6"
+        "image6 text6"
         ;
         grid-template-rows: 6rem auto;
         grid-template-columns: 1fr 1fr;
