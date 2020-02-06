@@ -11,8 +11,19 @@ body{
     "image2"
     "rentDogText2"
     "rentDogQuote2"
-    "rentDogText3"
     "image3"
+    "rentDogText3"
+    "rentDogQuote3"
+    "image4"
+    "rentDogText4"
+    "rentDogQuote4"
+    "image5"
+    "rentDogText5"
+    "rentDogQuote5"
+    "image6"
+    "rentDogText6"
+    "rentDogQuote6"
+    
     "rentDogBottomFill" ;
     grid-template-columns: 1fr;
     width: 100vw;
@@ -53,6 +64,10 @@ body{
 
 .dogImage .image5{
     grid-area: image5;
+    background-image: url("../images/dogScrumMaster.jpg");
+}
+.dogImage .image6{
+    grid-area: image6;
     background-image: url("../images/dogIntern.jpg");
 }
 
@@ -73,6 +88,7 @@ body{
     padding: 0 2em 0.5em 2em;
     height: 5em;
     background-color: white;
+    color: #123b12;
 }
 
 .rentDogBoxContent{
@@ -91,12 +107,27 @@ body{
 
 .rentDogQuote1{
     grid-area: rentDogQuote1;
-    color: #123b12;
+    
 }
 .rentDogQuote2{
     grid-area: rentDogQuote2;
-    color: #123b12;
 }
+
+.rentDogQuote3{
+    grid-area: rentDogQuote3;
+}
+
+.rentDogQuote4{
+    grid-area: rentDogQuote4;
+}
+
+.rentDogQuote5{
+    grid-area: rentDogQuote5;
+}
+.rentDogQuote6{
+    grid-area: rentDogQuote6;
+}
+
 .rentDogBottomFill{
     grid-area: rentDogBottomFill;
 }
@@ -108,6 +139,16 @@ body{
 }
 .rentDogText3{
     grid-area: rentDogText3;
+}
+.rentDogText4{
+    grid-area: rentDogText4;
+}
+.rentDogText5{
+    grid-area: rentDogText5;
+}
+
+.rentDogText6{
+    grid-area: rentDogText6;
 }
 
 
