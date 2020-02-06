@@ -12,6 +12,7 @@ function init(){
 function handleNavMenu(){
     const navSlide = () => {
         const navLinks = document.querySelectorAll('.navLinks li');
+        const navContainer = document.querySelector('.navLinks')
         const burger:Element = document.querySelector('.burger');
         const nav:Element = document.querySelector('.navLinks');
         

@@ -21,9 +21,9 @@ li{
     position:absolute;
     right:0;
     top: 10%;
-    padding: 2rem 3rem;
-    height:90%;
-    z-index:2;
+    
+    height:50%;
+    z-index:5;
     display:flex;
     flex-direction: column;
     justify-content: space-around;
@@ -48,6 +48,8 @@ li{
 }
 
 .nav-active{
+    display:flex;
+    padding: 2rem 3rem; 
     transform: translateX(0%);
 }
 

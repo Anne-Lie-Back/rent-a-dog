@@ -9,6 +9,7 @@ function init() {
 function handleNavMenu() {
     var navSlide = function () {
         var navLinks = document.querySelectorAll('.navLinks li');
+        var navContainer = document.querySelector('.navLinks');
         var burger = document.querySelector('.burger');
         var nav = document.querySelector('.navLinks');
         burger.addEventListener('click', function () {
