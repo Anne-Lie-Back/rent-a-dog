@@ -5,8 +5,8 @@ function init(){
     const slider:Element = document.querySelector('.slider');
     const logo:Element = document.querySelector('logo');
     const headline:Element = document.querySelector('.headline');
-    
     handleNavMenu();
+    handleDogPiano();
 }
 
 function handleNavMenu(){
@@ -31,4 +31,35 @@ function handleNavMenu(){
         }); 
     }
     navSlide();
+}
+
+function handleDogPiano(){
+    document.querySelector('.contactBall0').addEventListener('mouseover', () => {
+        const audio = new Audio('./audio/doggo0.wav');
+        audio.play();
+    });
+    document.querySelector('.contactBall1').addEventListener('mouseover', () => {
+        const audio = new Audio('./audio/doggo1.wav');
+        audio.play();
+    });
+    document.querySelector('.contactBall2').addEventListener('mouseover', () => {
+        const audio = new Audio('./audio/doggo2.wav');
+        audio.play();
+    });
+    document.querySelector('.contactBall3').addEventListener('mouseover', () => {
+        const audio = new Audio('./audio/doggo3.wav');
+        audio.play();
+    }); 
+    document.querySelector('.contactBall4').addEventListener('mouseover', () => {
+        const audio = new Audio('./audio/doggo4.wav');
+        audio.play();
+    }); 
+    document.querySelector('.contactBall5').addEventListener('mouseover', () => {
+        const audio = new Audio('./audio/doggo5.wav');
+        audio.play();
+    }); 
+    document.querySelector('.contactBall6').addEventListener('mouseover', () => {
+        const audio = new Audio('./audio/doggo6.wav');
+        audio.play();
+    }); 
 }
