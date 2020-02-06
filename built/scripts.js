@@ -5,6 +5,7 @@ function init() {
     var logo = document.querySelector('logo');
     var headline = document.querySelector('.headline');
     handleNavMenu();
+    bork0();
 }
 function handleNavMenu() {
     var navSlide = function () {
@@ -24,4 +25,8 @@ function handleNavMenu() {
         });
     };
     navSlide();
+}
+//document.querySelector('body').addEventListener("click", bork0);
+function bork0() {
+    console.log("korv");
 }

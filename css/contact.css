@@ -13,7 +13,7 @@ body{
     "contactBottomFill";
     grid-template-columns: 1fr;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     margin: auto;
     background-color: white;
     border-left: 0.2em solid black;
@@ -37,8 +37,39 @@ body{
 .contactTitle {
     grid-area: contactTitle;
     color: #123b12;
-    padding: 1em 0 0 2em;
+    padding: 1em 0 1em 2em;
     -webkit-text-stroke: 0.1em #123b12;
+    display: flex;
+}
+
+.flexboxTitle{
+    justify-content: space-between;
+}
+
+.titleBurger{
+    color: #123b12;
+    display: block;
+    font-size: 2rem;
+    position: absolute;
+    right: 0.8em;
+    top: 0.66em;
+}
+
+.fullScreenBurger{
+    display: none;
+}
+
+.flexboxTitle{
+    display: flex;
+}
+.contactTitle img{
+    display: block;
+    margin-right: 0.5em;
+
+}
+
+.largescreenLogo{
+    display: none;
 }
 
 .contactBox{
@@ -80,6 +111,21 @@ body{
 }
 
 
+.contactBottomFill{
+    grid-area: contactBottomFill;
+    background-color: white;
+    display: flex;
+    padding: 0 2.2em 1em;
+    justify-content: space-between;
+}
+
+.contactBall{
+    height: 2em;
+    width: 2em;
+    background-color: #123b12;
+    border-radius: 3em;
+}
+
 @media only screen and (min-width: 48em){
     .contactMain{
         grid-template-areas: 
@@ -107,10 +153,33 @@ body{
         background-position: 35% 0%;
     }
     .contactBox{
-        height: 8.5em;
+        height: 12em;
     }
 
     .contactDogImage h2{
         display: none;
     }
+    .titleBurger{
+        right: 2.5em;
+        top: 0.66em;
+    }
+}
+@media only screen and (min-width: 54em){
+    .contactTitle img{
+        display: none;
+    }
+    
+    .largescreenLogo{
+        display: block;
+    }
+
+    .titleBurger{
+        color: #123b12;
+        display: none;
+    }
+
+    .fullScreenBurger{
+        display: block;
+    }
+    
 }
