@@ -44,6 +44,7 @@ body{
 
 .flexboxTitle{
     justify-content: space-between;
+    z-index: 20;
 }
 
 .titleBurger{

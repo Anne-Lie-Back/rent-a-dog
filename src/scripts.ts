@@ -7,15 +7,20 @@ function init(){
     const headline:Element = document.querySelector('.headline');
     handleNavMenu();
     handleDogPiano();
+    idleUser();
 }
 
 function handleNavMenu(){
     const navSlide = () => {
         const navLinks = document.querySelectorAll('.navLinks li');
-        const burger:Element = document.querySelector('.burger');
+        const fullScreenBurger:Element = document.querySelector('.fullScreenBurger');
+        const titleBurger:Element = document.querySelector('.titleBurger');
         const nav:Element = document.querySelector('.navLinks');
         
-        burger.addEventListener('click', () => {
+        fullScreenBurger.addEventListener('click', toggleBurgerMeny);
+        titleBurger.addEventListener('click', toggleBurgerMeny);
+
+        function toggleBurgerMeny(){
             nav.classList.toggle('nav-active');
 
             navLinks.forEach((link:any, index)=>{
@@ -26,38 +31,40 @@ function handleNavMenu(){
                     link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
                 }
             })
-        }); 
+        }; 
     }
     navSlide();
 }
 
 function handleDogPiano(){
-    document.querySelector('.contactBall0').addEventListener('mouseover', () => {
-        const audio = new Audio('./audio/doggo0.wav');
-        audio.play();
-    });
-    document.querySelector('.contactBall1').addEventListener('mouseover', () => {
-        const audio = new Audio('./audio/doggo1.wav');
-        audio.play();
-    });
-    document.querySelector('.contactBall2').addEventListener('mouseover', () => {
-        const audio = new Audio('./audio/doggo2.wav');
-        audio.play();
-    });
-    document.querySelector('.contactBall3').addEventListener('mouseover', () => {
-        const audio = new Audio('./audio/doggo3.wav');
-        audio.play();
-    }); 
-    document.querySelector('.contactBall4').addEventListener('mouseover', () => {
-        const audio = new Audio('./audio/doggo4.wav');
-        audio.play();
-    }); 
-    document.querySelector('.contactBall5').addEventListener('mouseover', () => {
-        const audio = new Audio('./audio/doggo5.wav');
-        audio.play();
-    }); 
-    document.querySelector('.contactBall6').addEventListener('mouseover', () => {
-        const audio = new Audio('./audio/doggo6.wav');
-        audio.play();
-    }); 
+    const contactBall = document.querySelectorAll<HTMLElement>('.contactBall');
+
+    for (let i = 0; i < contactBall.length; ++i) {
+        contactBall[i].addEventListener('mouseover', () => {
+            const audio = new Audio('./audio/doggo'+ i +'.wav');
+            audio.play();
+        });
+      }
+};
+
+function idleUser() {
+    let t;
+    window.onload = resetTimer;
+    window.onmousemove = resetTimer;
+    window.onmousedown = resetTimer;  // catches touchscreen presses as well      
+    window.ontouchstart = resetTimer; // catches touchscreen swipes as well 
+    window.onclick = resetTimer;      // catches touchpad clicks as well
+    window.onkeypress = resetTimer;   
+    window.addEventListener('scroll', resetTimer, true); // improved; see comments
+    const secretDoggo = <HTMLElement>document.querySelector('.secretDoggo');
+
+    function revealTheSecretDoggo() {
+        secretDoggo.style.display = "block";
+        secretDoggo.style.animation = "slideInDoggo 15s ease-in";
+    }
+
+    function resetTimer() {
+        clearTimeout(t);
+        t = setTimeout(revealTheSecretDoggo, 1000);  // time is in milliseconds
+    }
 }
