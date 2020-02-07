@@ -121,6 +121,10 @@ nav{
     margin-right: 1.5rem;
 }
 
+.fullScreenBurger:hover{
+    cursor: pointer;
+}
+
 section{
     display:flex;
     height:100vh;
