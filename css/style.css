@@ -29,6 +29,23 @@ a{
     text-decoration: none;
 }
 
+.secretDoggo{
+    width: 50%;
+    position: fixed;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    bottom: -100%;
+    z-index: 3;
+    left: 10%;
+    display: none;
+}
+
+@keyframes slideInDoggo{
+    0% {bottom:-100%;}
+    50%{bottom:0%;}
+    100%{bottom:-100%; display: none;}
+}
+
 .navLinks{
     background-color: white;
     position:absolute;

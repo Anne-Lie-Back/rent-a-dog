@@ -147,21 +147,10 @@ body{
     .contactText{
         padding-top: 0;
     }
-
-    .contactDogImage{
-        height: 100%;
-        margin: 0;
-        grid-area: contactDogImage;
-        background-size: cover;
-        background-position: 35% 0%;
-    }
     .contactBox{
         height: 12em;
     }
 
-    .contactDogImage h2{
-        display: none;
-    }
     .titleBurger{
         right: 2.5em;
         top: 0.66em;
