@@ -13,7 +13,7 @@ body{
     "contactBottomFill";
     grid-template-columns: 1fr;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     margin: auto;
     background-color: white;
     border-left: 0.2em solid black;
@@ -118,6 +118,7 @@ body{
     background-color: white;
     display: flex;
     padding: 0 2.2em 1em;
+    height: 5em;
     justify-content: space-between;
 }
 
