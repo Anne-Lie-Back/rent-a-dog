@@ -40,6 +40,33 @@ body{
     transform: scaleX(-1);
 }
 
+.titleBurger{
+    color: #123b12;
+    display: block;
+    font-size: 2rem;
+    position: absolute;
+    right: 0.8em;
+    top: 0.66em;
+}
+
+.fullScreenBurger{
+    display: none;
+}
+
+
+.flexboxTitle{
+    display: flex;
+}
+
+.rentDogTitle img{
+    display: block;
+    margin-right: 0.5em;
+}
+
+.largescreenLogo{
+    display: none;
+}
+
 .image1{
     grid-area: image1;
    /* background-image: url("../images/dogBranchManager.jpg");*/
@@ -73,6 +100,7 @@ body{
 .rentDogTitle {
     grid-area: title;
     color: #123b12;
+    display: flex;
     padding: 1em 0 1em 2em;
     -webkit-text-stroke: 0.1em #123b12;
 }
@@ -239,4 +267,29 @@ h3{
         height:auto;
     }
 
+    .titleBurger{
+        right: 2.5em;
+        top: 0.66em;
+    }
+
+}
+
+@media only screen and (min-width: 54em){
+    .rentDogTitle img{
+        display: none;
+    }
+    
+    .largescreenLogo{
+        display: block;
+    }
+
+    .titleBurger{
+        color: #123b12;
+        display: none;
+    }
+
+    .fullScreenBurger{
+        display: block;
+    }
+    
 }

@@ -60,8 +60,9 @@ function idleUser() {
     const secretDoggo = <HTMLElement>document.querySelector('.secretDoggo');
 
     function revealTheSecretDoggo() {
+        console.log("korv");
         secretDoggo.style.display = "block";
-        secretDoggo.style.animation = "slideInDoggo 15s ease-in";
+        secretDoggo.style.animation = "slideInDoggo 1s ease-in";
     }
 
     function resetTimer() {
