@@ -1,0 +1,242 @@
+body{
+    background:linear-gradient(to left , #1e621e, #123b12);
+}
+.rentDogMain{
+    display: grid;
+    grid-template-areas:
+    "title"
+    "image1"
+    "text1"
+    "quote1"
+    "image2"
+    "text2"
+    "quote2"
+    "image3"
+    "text3"
+    "quote3"
+    "image4"
+    "text4"
+    "quote4"
+    "image5"
+    "text5"
+    "quote5"
+    "image6"
+    "text6"
+    "quote6";
+    grid-template-columns: 1fr; 
+    width: 100vw;
+    margin: auto;
+    background-color: white;
+    border-left: 0.2em solid black;
+    border-right: 0.2em solid black;
+}
+
+.dogImage{
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.4);
+    height: 16rem;
+    width:100%;
+    object-fit: cover;
+    background-position: center;
+    transform: scaleX(-1);
+}
+
+.image1{
+    grid-area: image1;
+   /* background-image: url("../images/dogBranchManager.jpg");*/
+}
+
+.image2{
+    grid-area: image2;
+   /* background-image: url("../images/dogModel.jpg");*/
+}
+
+.image3{
+    grid-area: image3;
+    /*background-image: url("../images/dogPhotographer.jpg");*/
+}
+
+.image4{
+    grid-area: image4;
+   /*  background-image: url("../images/dogSuper.jpg"); */
+}
+
+.image5{
+    grid-area: image5;
+   /*  background-image: url("../images/dogScrumMaster.jpg"); */
+}
+.image6{
+    grid-area: image6;
+    display:flex;
+   /*  background-image: url("../images/dogIntern.jpg"); */
+}
+
+.rentDogTitle {
+    grid-area: title;
+    color: #123b12;
+    padding: 1em 0 1em 2em;
+    -webkit-text-stroke: 0.1em #123b12;
+}
+
+.rentDogBox{
+    padding: 0 1.8em 1em 1.8em;
+    /*height: 13rem;*/
+    background-color: white;
+}
+
+.rentDogBox p{
+    margin-top:0.3rem;
+}
+
+h3{
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.occupation{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.rentDogBoxQuote{
+    padding: 0 2em 0.5em 2em;
+    height: 9em;
+    background-color: white;
+    color: #123b12;
+}
+
+ .rentDogBoxContent{
+    margin-top: 1em;
+    margin-left: 0.8em;
+} 
+
+ .quote{
+    font-style: italic;
+    padding: 0.5rem;
+}
+
+ .quoter{
+    font-weight: bold;
+    text-align: right;
+    padding: 0 1.7rem 0.5rem 0.5rem;
+}
+
+ .dogImage h2{
+    color: white;
+    font-size: 0.5em;
+    position: relative;
+    top: 17%;
+    left: 5%
+}
+
+.rentDogQuote1{
+    grid-area: quote1;
+    
+}
+.rentDogQuote2{
+    grid-area: quote2;
+}
+
+.rentDogQuote3{
+    grid-area: quote3;
+}
+
+.rentDogQuote4{
+    grid-area: quote4;
+}
+
+.rentDogQuote5{
+    grid-area: quote5;
+}
+
+.rentDogQuote6{
+    grid-area: quote6;
+}
+
+.rentDogText1{
+    grid-area: text1;
+}
+
+.rentDogText2{
+    grid-area: text2;
+}
+
+.rentDogText3{
+    grid-area: text3;
+}
+
+.rentDogText4{
+    grid-area: text4;
+}
+
+.rentDogText5{
+    grid-area: text5;
+}
+
+.rentDogText6{
+    grid-area: text6;
+}
+
+.desktopImage6{
+    display:none;
+}
+
+@media only screen and (min-width: 48em){
+    .image6{
+        display:none;
+    }
+
+    .desktopImage6{
+        display:flex;
+        grid-area: desktop6;
+    }
+/*
+    .image6{
+        display:flex;
+        justify-self: center; 
+        height:100%;
+        width:auto;
+    }*/
+     .rentDogMain{
+
+        grid-template-areas: 
+        "title title"
+        "text1 image1"
+        "quote1 image1"
+        "image2 text2"
+        "image2 quote2"
+        "text3 image3"
+        "quote3 image3"
+        "image4 text4"
+        "image4 quote4"
+        "text5 image5"
+        "quote5 image5"
+        "desktop6 text6"
+        "desktop6 text6"
+        "desktop6 text6"
+        "desktop6 text6"
+        "desktop6 quote6"
+        "desktop6 quote6"
+        "desktop6 quote6"
+        ;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr ;
+        width: 50em;
+    } 
+    .dogImage{
+        height:100%;
+    }
+
+    .rentDogTitle {
+        padding: 2em 0 -5em 2em;
+    }
+
+    .rentDogText{
+        padding-top: 0;
+    }
+
+    .rentDogBoxQuote{
+        height:auto;
+    }
+
+}
