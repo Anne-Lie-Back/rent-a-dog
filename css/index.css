@@ -2,9 +2,95 @@ body{
     overflow: hidden;
 }
 
+.slider{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:linear-gradient(to left, #1e621e, #123b12
+    );
+    z-index: -1;
+    animation-name: slideInSlider;
+    animation-duration: 3s;
+}
+
+@keyframes slideInSlider{
+    0% {left:-100%}
+    50%{left:-100%}
+    100%{left:0%;}
+}
+
+.headlineContainer{
+    position: absolute;
+    top:65%;
+    left:15%;
+    transform: translate(-20%, -70%);
+    /* z-index: 2; */
+    animation-name: fadeInHeadline;
+    animation-duration:3s;
+}
+
+.headline{
+    font-size:3rem;
+    color:white;
+    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+}
+
+.underHeadline{
+    font-weight:bold;
+    /* z-index:1; */
+}
+
+@keyframes fadeInHeadline{
+    0% {opacity:0;}
+    50% {opacity:0;}
+    100%{opacity:1;}
+}
+
+.hero{
+    z-index: 0;
+    height: 80%;
+    width: 85%;
+    position: relative;
+    animation-name: expandHero;
+    animation-duration: 3s;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border: 2px solid black;
+}
+
+@keyframes expandHero{
+    0% {height: 0%; width:100%;}
+    50%  {height:80%;width:100%;}
+    100% {width:85%;}
+}
+
+@keyframes expandHeroWidth{
+    from{width:100%;}
+    to{width:85%;}
+}
+
+/*OBS! DESKTOP FIRST*/
+
 @media only screen and (max-width: 48em){
 
     .navLinks{
         width:100%;
+    }
+
+    .headlineContainer{
+        left:20%;
+    }
+
+    .headline{
+        font-size: 2rem;
+    }
+    .underheadline{
+        font-size:0.5rem;
     }
 }
