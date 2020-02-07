@@ -209,7 +209,15 @@ h3{
     display:none;
 }
 
+nav{
+    display:none;
+}
+
 @media only screen and (min-width: 48em){
+    nav{
+        display:grid;
+    }
+
     .image6{
         display:none;
     }
@@ -257,6 +265,7 @@ h3{
 
     .rentDogTitle {
         padding: 2em 0 -5em 2em;
+        z-index: 25;
     }
 
     .rentDogText{

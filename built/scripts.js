@@ -55,11 +55,12 @@ function idleUser() {
     window.addEventListener('scroll', resetTimer, true); // improved; see comments
     var secretDoggo = document.querySelector('.secretDoggo');
     function revealTheSecretDoggo() {
+        console.log("korv");
         secretDoggo.style.display = "block";
         secretDoggo.style.animation = "slideInDoggo 15s ease-in";
     }
     function resetTimer() {
         clearTimeout(t);
-        t = setTimeout(revealTheSecretDoggo, 1000); // time is in milliseconds
+        t = setTimeout(revealTheSecretDoggo, 10000); // time is in milliseconds
     }
 }

@@ -62,11 +62,12 @@ function idleUser() {
     function revealTheSecretDoggo() {
         console.log("korv");
         secretDoggo.style.display = "block";
-        secretDoggo.style.animation = "slideInDoggo 1s ease-in";
+        secretDoggo.style.animation = "slideInDoggo 15s ease-in";
     }
 
     function resetTimer() {
         clearTimeout(t);
-        t = setTimeout(revealTheSecretDoggo, 1000);  // time is in milliseconds
+        t = setTimeout(revealTheSecretDoggo, 10000);  // time is in milliseconds
     }
 }
+
