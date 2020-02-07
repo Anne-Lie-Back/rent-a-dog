@@ -2,6 +2,24 @@ body{
     background:linear-gradient(to left , #1e621e, #123b12);
 }
 
+.secretDoggo{
+    width: 50%;
+    position: fixed;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    bottom: -100%;
+    z-index: 3;
+    left: 10%;
+    display: none;
+    animation: slideInDoggo 20s ease-in-out;
+}
+
+@keyframes slideInDoggo{
+    0% {bottom:-100%;}
+    50%{bottom:0%;}
+    100%{bottom:-100%; display: none;}
+}
+
 .aboutUsMain{
     display: grid;
     grid-template-areas:
@@ -33,6 +51,7 @@ body{
 
 .flexboxTitle{
     justify-content: space-between;
+    z-index: 20;
 }
 
 .titleBurger{
